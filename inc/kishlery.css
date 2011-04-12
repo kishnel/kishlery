@@ -1,0 +1,245 @@
+.KLmainContainer{
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica;
+	margin:0 auto;
+	width:100%;
+	height:100px;
+	position:relative;
+	overflow:hidden;
+}
+.KLmainContainer a{outline: none;}
+.KLmainContainer .KLpre_counter{
+	display:block;
+	width:200px;
+	height:15px;
+	margin:-8px auto 0 auto;
+	position:relative;
+	top:50%;
+	background:#242325;
+}
+.KLmainContainer .KLpre_counter span{
+	background:#004dff;
+	color:#fff;
+	font-size:9px;
+	display:block;
+	width:1px;
+	height:15px;
+	line-height:15px;
+	text-indent:5px;
+}
+.KLmainContainer .error{
+	margin:10px auto;
+	background:#990000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	width:500px;
+	padding:10px;
+}
+.KLmainContainer .error.floating{
+	position:absolute;
+	top:10px;
+	left:50%;
+	z-index:20;
+	margin-left:-250px;
+}
+.KLmainContainer .error ul{}
+.KLmainContainer .error ul li{line-height:20px; margin-bottom:5px;}
+
+
+/* ---------------------------------------- QUICK VIEW ------------------------------------------ */
+.KLmask{background:#000; width:100%; height:100%; position:absolute; top:0; left:0; z-index:998;}
+.KLquickView{
+	display:none;
+	position:absolute;
+	z-index:999;
+	-webkit-perspective: 1500;
+}
+.KLquickView img{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-backface-visibility: hidden;
+}
+.KLquickView img.clone{
+	display:none;
+	width:100% !important;
+	height:100% !important;
+	margin:0 !important;
+}
+.KLquickView .loader{
+	display:none;
+	background: url('../img/loading.gif') no-repeat center;
+	width:16px;
+	height:16px;
+	position:absolute;
+	bottom:5px; 
+	right:10px;
+}
+.KLquickView.loading .loader{display:block;}
+.KLquickView.loading img.clone{display:block;}
+.KLquickView.notFound .loader{display:none;}
+.KLquickView.notFound img.clone{display:block;}
+
+/* Giochino flip card... */
+.KLquickView .card{
+	width:100%; 
+	height:100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 1.5s;
+	cursor: pointer;
+	cursor: url('../img/zoomout.png'), -moz-zoom-out;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+.KLquickView .card .front, .KLquickView .card .back{
+	width:100%;
+	height:100%;
+	-webkit-backface-visibility: hidden;
+}
+.KLquickView .card.flipped{-webkit-transform: rotateY(180deg);}
+.KLquickView .card .back{
+	background:red;
+	-webkit-transform: rotateY(180deg);
+}
+/* ...fine giochino flip card */
+
+
+/* -------------------------------------- PICS CONTAINER ---------------------------------------- */
+.KLpics_container{
+	background:#111;
+	position:relative;
+	width:100%;
+	min-height:50px;
+	overflow:hidden;
+	white-space:nowrap;
+	margin:0 auto;
+	display:none;
+}
+.KLpics_container img{
+	margin:0 1px;
+	vertical-align:middle;
+	cursor: pointer;
+}
+.KLpics_container img.current{
+	cursor: url('../img/zoomin.png'), -moz-zoom-in;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+.KLdashboard{
+	width:100%;
+	background:#111; 
+	display:none;
+	padding:0;
+	background:-moz-linear-gradient(-90deg, #333, #000);
+	background:-webkit-gradient(linear, left top, left bottom, from(#000), to(#222));
+}
+
+/* ------------------------------------------- TITLE -------------------------------------------- */
+.KLtitle{
+	border-top:1px solid #333;
+	text-align:center;
+	line-height:30px;
+	font-weight:bold; 
+	font-size:16px;
+	color:#fff;
+}
+.KLtitle a{color:#fff; text-decoration:none;}
+.KLtitle a:hover{text-decoration:underline;}
+.KLtitle .KLinfo{font-size:10px; line-height:12px; height:20px; color:#666;}
+.KLtitle .KLinfo a{font-size:10px; padding:0 10px; color:#666;}
+
+
+/* ------------------------------------------ BUTTONS ------------------------------------------- */
+.KLbuttons{
+	text-align:center;
+	height:25px;
+	position:relative; 
+	border-top:1px solid #333;
+}
+.KLbuttons a{position:absolute; top:0; display:block; width:25px; height:25px;}
+.KLbuttons a.KLthumbs_switcher{background: url('../img/thumbs.gif'); left:0;}
+.KLbuttons a.KLback{background:url('../img/previous.gif'); left:-45px; margin-left:50%;}
+.KLbuttons a.KLplay{background:url('../img/play.gif'); left:-12px; margin-left:50%;}
+.KLbuttons a.KLplay.pause{background:url('../img/pause.gif');}
+.KLbuttons a.KLnext{background:url('../img/next.gif'); left:21px; margin-left:50%;}
+.KLbuttons a:hover{background-color:#333 !important;}
+.KLbuttons .KLcounter{
+	position:absolute;
+	top:5px;
+	right:7px;
+	cursor:pointer;
+	width:100px;
+	height:14px;
+	line-height:14px;
+	font-size:9px;
+	background:#000;
+	color:#fff;
+	text-align:right;
+}
+.KLbuttons .KLcounter span{background:#222; display:block; width:0;}
+.KLbuttons .KLstopped{color:red;}
+
+
+/* ---------------------------------------- THUMBNAILS ----------------------------------------- */
+.KLthumbnails{
+	border-top:1px solid #333;
+	margin:0 auto;
+	text-align:left;
+	font-size:10px;
+	position:relative;
+	height:64px;
+}
+
+.KLthumbs_back, .KLthumbs_forward{
+	text-align:center;
+	font-size:14px;
+	width:3%;
+	height:64px;
+	color:#fff;
+	overflow:hidden;
+	text-decoration:none;
+	float:left;
+}
+.KLthumbs_back{background: url('../img/previous.gif') no-repeat center;}
+.KLthumbs_forward{background: url('../img/next.gif') no-repeat center;}
+.KLthumbs_back:hover, .KLthumbs_forward:hover{background-color:#333; text-decoration:none;}
+
+.KLthumbsContainer{
+	float:left;
+	width:94%;
+	overflow:hidden;
+	line-height:1px;
+	white-space:nowrap;
+	position:relative;
+}
+.KLthumbsContainer img{width:60px; height:60px; margin:2px; cursor:pointer;}
+.KLthumbsContainer img.KLselected{border:2px solid #004dff; margin:0;}
+
+
+.KLmosaic{
+	width:100%;
+	background:#000;
+	overflow:auto;
+	line-height:1px;
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+.KLmosaic div{padding:5px 8px;}
+.KLmosaic img{width:45px; height:45px; margin:2px; border:0; cursor:pointer;}
+.KLmosaic img.KLselected{border:2px solid #004dff; margin:0;}
+
+.KLfooter{font-family: "Lucida Grande", Verdana, Arial, Helvetica; font-size:9px; text-align:center; color:#999; line-height:20px;}
+
+
+/* --------------------------------------- SINGLE MODE ------------------------------------------ */
+.KLsingle_mode{}
+.KLsingle_mode .KLpics_container{border:1px solid #666; position:relative;}
+.KLsingle_mode .KLpics_container img{vertical-align:top; border:0;}
+.KLsingle_mode .KLpics_container img.opera{position:absolute; top:0; left:0;}
+.KLsingle_mode .KLdashboard{position:absolute; bottom:0; left:0;}
