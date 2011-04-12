@@ -1,9 +1,26 @@
+/*
+Copyright 2008, 2011 Marcello Mascia
+
+This file is part of Kishlery.
+
+Kishlery is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Kishlery is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Kishlery. If not, see <http://www.gnu.org/licenses/>
+*/
+
 var originalFrontHeight;
 
 window.addEvent('load', function(){
 	switchMode(currentMode);
-	
-	showFacebookPage();
 });
 
 
@@ -43,7 +60,6 @@ function switchMode(s){
 	}	
 	
 	$('id_label').getElement('span').innerHTML = text;
-//	$('settings').id.value = '';
 }
 
 function toggleSettings(button){
@@ -136,8 +152,4 @@ var Panel = {
 	copy: function(){
 //		alert('Cipio');
 	}
-}
-
-function showFacebookPage(){
-	$('facebookPage').tween('top', 50);
 }
