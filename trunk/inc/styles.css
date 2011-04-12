@@ -1,0 +1,207 @@
+html{background:#000 url('../img/ocean.png');}
+body{color:#fff; font-family: Helvetica, Arial, sans-serif; margin:0; height:100%;}
+a{color:#004dff; text-decoration:none; outline:none;}
+a:hover{text-decoration:underline;}
+
+#header{
+	padding: 30px 50px;
+	background: #000;
+}
+#header h1{margin:0; padding: 0; font-size: 40px; font-weight: normal; font-family: Georgia, serif;}
+#header h1 a{color:#fff;}
+#header ul{float:right; list-style: none; padding:0; margin:-30px 0 0 0;}
+#header ul li{
+	float:left;
+	margin-left: 10px;
+	border-radius: 2px 2px;
+}
+#header ul li.selected{background: #666;}
+#header ul li a{
+	color: white;
+	display: block;
+	line-height: 18px;
+	padding: 5px 10px;
+	text-decoration: none;
+	z-index: 100;
+	font-size: 14px;
+}
+
+#headerBis{
+	height:80px;
+	z-index:1;
+	position:relative;
+	margin:0 auto;
+	padding:0 40px;
+	background:#222;
+	background:-moz-linear-gradient(-90deg, #000, #222);
+	background:-webkit-gradient(linear, left top, left bottom, from(#000), to(#222));
+	border-top:1px solid #333;
+	border-bottom:1px solid #333;
+	overflow:hidden;
+}
+#headerBis a{
+	font-size:20px;
+	display:block; 
+	width:310px; 
+	height:44px;
+	text-decoration:none;
+	padding:6px 10px 0 50px;
+	background: url('../img/medusa.png') no-repeat;
+}
+#headerBis a span{font-size:11px; font-weight:normal; color:#999; display:block;}
+
+
+#facebookPage{
+	border:none;
+	overflow:hidden;
+	width:80%;
+	height:25px;
+	position:absolute;
+	top:100px;
+	left:50px;
+}
+
+.sub_header{background:#111; position:relative; height:25px; margin-bottom:20px;}
+.sub_header .links{position:absolute; top:0; right:0; height:25px;}
+.sub_header .links a{
+	font-size:12px;
+	display:block;
+	width:105px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	padding:0 10px;
+	background:#222;
+	color:#fff;
+	float:left;
+	margin-right:1px;
+}
+.sub_header .links a:hover{text-decoration:none; background:#004dff;}
+.sub_header .links a.selected{text-decoration:none; background:#444;}
+
+form#paypal_form{margin:0; padding:0;}
+
+form#settings{
+	position:relative;
+	padding:0;
+	width:800px;
+	height:0;
+	overflow:hidden;
+	margin:0 auto;
+}
+form#settings fieldset{
+	background:#222;
+	background:-moz-linear-gradient(-90deg, #222, #000);
+	background:-webkit-gradient(linear, left top, left bottom, from(#222), to(#000));
+	margin:10px 5px 10px 10px;
+	padding:10px;
+	border:2px solid #004dff;
+	float:left; 
+	width:350px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+form#settings fieldset legend{color:#004dff; text-align:left;}
+form#settings fieldset label{
+	display:block;
+	overflow:hidden;
+	line-height:30px;
+}
+form#settings fieldset.params label{
+	position:relative; 
+	padding-left:175px;
+	width:175px;
+	line-height:25px;
+	font-size:12px;
+}
+form#settings fieldset.params label span{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:170px;
+	line-height:25px;
+	height:25px;
+	text-align:right;
+}
+form#settings fieldset.params label.indented span{
+	left:195px;
+	text-align:left;
+	width:150px;
+	font-size:10px;
+	color:#c0c0c0;
+}
+form#settings fieldset.params label input.text{
+	width:160px;
+	font-size:14px;
+	padding:2px;
+	margin:0;
+	border:2px solid #555;
+}
+form#settings fieldset.params label input.checkbox{vertical-align:middle; margin:0; padding:0;}
+form#settings fieldset.params label select{width:160px;}
+form#settings input.button{
+	clear:both;
+	width:100px;
+	display:block;
+	margin:30px auto;
+	border:2px solid #f0f0f0;
+	height:40px;
+	background:#222;
+	color:#fff;
+	cursor:pointer;
+	font-size:14px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+form#settings input.button:hover{background:#004dff;}
+
+#kishlery{width:800px;}
+
+.mask{background:#000; width:100%; height:100%; position:absolute; top:0; left:0; z-index:1000;}
+.codeDiv{
+	background:#666;
+	background:-moz-linear-gradient(-90deg, #666, #222);
+	background:-webkit-gradient(linear, left top, left bottom, from(#666), to(#222));
+	border:2px solid #999;
+	border-top:0;
+	position:absolute;
+	top:-500px;
+	z-index:1010;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-o-border-bottom-left-radius: 10px;
+	-o-border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	text-align:right;
+}
+.codeDiv h3{font-size:14px; margin:0; padding:0; line-height:40px; text-align:center;}
+.codeDiv textarea{margin:0 10px 10px 10px;}
+.codeDiv input.button{
+	width:20px;
+	height:20px;
+	border:2px solid #f0f0f0;
+	line-height:17px;
+	background:#222 url('../img/close.png') no-repeat 2px 1px;
+	color:#fff;
+	cursor:pointer;
+	font-size:10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	position:absolute;
+	top:10px;
+	right:10px;
+	text-align:center;
+	outline:none;
+}
+.codeDiv input.button:hover{background-color:#004dff;}
