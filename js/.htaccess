@@ -1,0 +1,7 @@
+# Tutte le chiamate fallite a ./js/global.js devono puntare a ./js/aggregator.js
+RewriteEngine On
+RewriteBase /kishlery/js
+
+RewriteCond %{REQUEST_FILENAME} global.js$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*) aggregator.php [L]
