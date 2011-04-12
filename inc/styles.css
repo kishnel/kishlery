@@ -1,69 +1,30 @@
-html{background:#000 url('../img/ocean.png');}
+/*
+Copyright 2008, 2011 Marcello Mascia
+
+This file is part of Kishlery.
+
+Kishlery is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Kishlery is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Kishlery. If not, see <http://www.gnu.org/licenses/>
+*/
+
+html{background:#333;}
 body{color:#fff; font-family: Helvetica, Arial, sans-serif; margin:0; height:100%;}
 a{color:#004dff; text-decoration:none; outline:none;}
 a:hover{text-decoration:underline;}
 
-#header{
-	padding: 30px 50px;
-	background: #000;
-}
-#header h1{margin:0; padding: 0; font-size: 40px; font-weight: normal; font-family: Georgia, serif;}
-#header h1 a{color:#fff;}
-#header ul{float:right; list-style: none; padding:0; margin:-30px 0 0 0;}
-#header ul li{
-	float:left;
-	margin-left: 10px;
-	border-radius: 2px 2px;
-}
-#header ul li.selected{background: #666;}
-#header ul li a{
-	color: white;
-	display: block;
-	line-height: 18px;
-	padding: 5px 10px;
-	text-decoration: none;
-	z-index: 100;
-	font-size: 14px;
-}
-
-#headerBis{
-	height:80px;
-	z-index:1;
-	position:relative;
-	margin:0 auto;
-	padding:0 40px;
-	background:#222;
-	background:-moz-linear-gradient(-90deg, #000, #222);
-	background:-webkit-gradient(linear, left top, left bottom, from(#000), to(#222));
-	border-top:1px solid #333;
-	border-bottom:1px solid #333;
-	overflow:hidden;
-}
-#headerBis a{
-	font-size:20px;
-	display:block; 
-	width:310px; 
-	height:44px;
-	text-decoration:none;
-	padding:6px 10px 0 50px;
-	background: url('../img/medusa.png') no-repeat;
-}
-#headerBis a span{font-size:11px; font-weight:normal; color:#999; display:block;}
-
-
-#facebookPage{
-	border:none;
-	overflow:hidden;
-	width:80%;
-	height:25px;
-	position:absolute;
-	top:100px;
-	left:50px;
-}
-
-.sub_header{background:#111; position:relative; height:25px; margin-bottom:20px;}
-.sub_header .links{position:absolute; top:0; right:0; height:25px;}
-.sub_header .links a{
+.header{position:relative; height:25px; margin-bottom:20px;}
+.header .links{position:absolute; top:0; right:0; height:25px;}
+.header .links a{
 	font-size:12px;
 	display:block;
 	width:105px;
@@ -76,10 +37,8 @@ a:hover{text-decoration:underline;}
 	float:left;
 	margin-right:1px;
 }
-.sub_header .links a:hover{text-decoration:none; background:#004dff;}
-.sub_header .links a.selected{text-decoration:none; background:#444;}
-
-form#paypal_form{margin:0; padding:0;}
+.header .links a:hover{text-decoration:none; background:#004dff;}
+.header .links a.selected{text-decoration:none; background:#444;}
 
 form#settings{
 	position:relative;
@@ -186,22 +145,17 @@ form#settings input.button:hover{background:#004dff;}
 .codeDiv h3{font-size:14px; margin:0; padding:0; line-height:40px; text-align:center;}
 .codeDiv textarea{margin:0 10px 10px 10px;}
 .codeDiv input.button{
-	width:20px;
-	height:20px;
-	border:2px solid #f0f0f0;
+	width:30px;
+	height:30px;
+	border:0;
 	line-height:17px;
-	background:#222 url('../img/close.png') no-repeat 2px 1px;
+	background: url('../img/close.png') no-repeat;
 	color:#fff;
 	cursor:pointer;
 	font-size:10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
 	position:absolute;
 	top:10px;
 	right:10px;
 	text-align:center;
 	outline:none;
 }
-.codeDiv input.button:hover{background-color:#004dff;}

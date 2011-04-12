@@ -1,7 +1,25 @@
 <?php
+/*
+Copyright 2008, 2011 Marcello Mascia
+
+This file is part of Kishlery.
+
+Kishlery is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Kishlery is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Kishlery. If not, see <http://www.gnu.org/licenses/>
+*/
 if(isset($_GET['id'])){
 	$mode = isset($_GET['mode'])?$_GET['mode']:'photoset';
-	$id = isset($_GET['id'])?$_GET['id']:72157600228207572;
+	$id = isset($_GET['id'])?$_GET['id']:72057594096459350;
 	$limit = isset($_GET['limit']) && is_numeric($_GET['limit'])?$_GET['limit']:30;
 	$tags = isset($_GET['tags'])?$_GET['tags']:'';
 	$maxSize = isset($_GET['maxSize'])?$_GET['maxSize']:'';
@@ -24,8 +42,8 @@ if(isset($_GET['id'])){
 	$showFooter = isset($_GET['showFooter'])?true:false;
 }
 else{
-	$mode = 'photoset'; // photoset, user, group, folder
-	$id = '72157600228207572';
+	$mode = 'user'; // photoset, user, group, folder
+	$id = 'carodani';
 	$limit = 30;
 	$tags = '';
 	$maxSize = '300';
@@ -150,41 +168,14 @@ foreach($params as $p => $v){
 	</style>
 </head>
 <body>
-
-	<div id="header">
-		<h1><a href="/">kishnel.com</a></h1>
-		
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/menelao/">Menelao</a></li>
-			<li class="selected"><a href="/kishlery/">Kishlery</a></li>
-		</ul>
-	</div>
-
-	<div id="headerBis">
-		<a href="./">Kishlery<span>a beautiful image gallery made with javascript and love</span></a>
-		
-		<iframe id="facebookPage" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FKishlery%2F153911154648625&amp;layout=standard&amp;show_faces=false&amp;width=600&amp;action=like&amp;font=verdana&amp;colorscheme=dark&amp;height=25" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-	</div>	
 	
-	<div class="sub_header">
+	<div class="header">
 		<!-- Buttons -->
 		<div class="links">
-			<!--a href="./" onclick="return false;">Blog</a-->
-			<a href="mailto:kishlery@me.com">Contact me</a>
-			<a href="http://www.flickr.com/services/apps/72157623372246869/">App Garden</a>
-			<a href="./" onclick="$('paypal_form').submit(); return false;">Donate</a>
 			<a href="./" onclick="Panel.open(); return false;">Get code</a>
 			<a href="./" onclick="toggleSettings(this); return false;">Change settings</a>
 		</div>
 	</div>
-	
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal_form">
-		<input type="hidden" name="cmd" value="_s-xclick" />
-		<input type="hidden" name="hosted_button_id" value="ZEDTCTAEGVZXY" />
-		<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-	</form>
-
 
 	<form action="./" method="get" id="settings">
 		<fieldset class="types">
@@ -229,16 +220,6 @@ foreach($params as $p => $v){
 			showFooter: "<?php echo $showFooter; ?>"
 		});
 	</script>
-	
-<!-- Google analytics -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-52656-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+
 </body>
 </html>

@@ -1,6 +1,5 @@
 /*
-Version: 2
-Copyright 2008, 2010 Marcello Mascia
+Copyright 2008, 2011 Marcello Mascia
 
 This file is part of Kishlery.
 
@@ -88,7 +87,7 @@ var Kishlery = new Class({
 			return;
 		}
 
-		var root = window.location.href.contains('kishnel.dev') ? 'http://www.kishnel.dev/kishlery' : 'http://www.kishnel.com/kishlery';
+		var root = './';
 		
 		// Registro le opzioni
 		this.setOptions(options);

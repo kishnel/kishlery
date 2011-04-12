@@ -1,10 +1,25 @@
 <?php
 /*
-Version: 2.1
-Copyright 2008, 2010 Marcello Mascia
+Copyright 2008, 2011 Marcello Mascia
+
+This file is part of Kishlery.
+
+Kishlery is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Kishlery is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Kishlery. If not, see <http://www.gnu.org/licenses/>
 */
+
 class Flickr{
-	private	$api_key = '56bde00334d3375bf6e2b663ecfd1fa0';
+	private	$api_key = ''; // get an API key from http://www.flickr.com/services/apps/create/apply/
 	private $endpoint = 'http://api.flickr.com/services/rest/';
 	private $connection_timeout = 20; // seconds
 	private $io_timeout = 20; // seconds
