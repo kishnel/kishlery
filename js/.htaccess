@@ -1,4 +1,5 @@
-# Tutte le chiamate fallite a ./js/global.js devono puntare a ./js/aggregator.js
+# All failed calls to ./js/global.js are redirected to ./js/aggregator.php
+
 RewriteEngine On
 RewriteBase /kishlery/js
 
