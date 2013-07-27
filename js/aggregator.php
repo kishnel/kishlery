@@ -23,7 +23,7 @@ require './jsmin.php';
 
 // Array dei javascript da includere
 $javascripts = array(
-	'http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js' => false,
+	'http://ajax.googleapis.com/ajax/libs/mootools/1.2.5/mootools-yui-compressed.js' => false,
 	'../inc/mootools-1.2.4.4-more.js' => false,
 	'../inc/kishlery.js' => true
 );
@@ -31,7 +31,8 @@ $javascripts = array(
 $js = "// All-in-one for kishlery.com ". date("d/m/Y H:i:s") ."\n\n";
 
 // Recupero e unisco i javascript
-foreach($javascripts as $javascript => $compress){
+foreach($javascripts as $javascript => $compress)
+{
 	$file = file_get_contents($javascript);
 	
 	$js .= "// Here starts ".$javascript."\n\n";	
@@ -40,7 +41,8 @@ foreach($javascripts as $javascript => $compress){
 }
 
 // Salvo su file
-if(1){
+if(1)
+{
 	$h = fopen('./global.js', 'w');
 	fwrite($h, $js);
 	fclose($h);
